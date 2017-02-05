@@ -1,3 +1,3 @@
 # starwars-names
 
-I like twixcat
+A simple project for testing travis 
