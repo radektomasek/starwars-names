@@ -1,14 +1,7 @@
-'use strict'
+import  uniqueRandomArray from 'unique-random-array'
+const starWarsNames = require('./starwars_names.json')
 
-var uniqueRandomArray = require('unique-random-array')
-var starWarsNames = require('./starwars_names.json')
-
-module.exports = {
+export default {
   all: starWarsNames,
-  random: uniqueRandomArray(starWarsNames),
-  test: test
-}
-
-function test() {
-  return "abc"
+  random: uniqueRandomArray(starWarsNames)
 }

@@ -1,7 +1,5 @@
-'use strict'
-
-var expect = require('chai').expect
-var starWarsNames = require('./index')
+import { expect } from 'chai'
+import starWarsNames from './index'
 
 describe('starwars-names', function() {
   it('should have a list of all available names', function() {
