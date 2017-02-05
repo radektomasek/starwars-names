@@ -1,0 +1,59 @@
+{
+  "name": "starwars-names",
+  "version": "1.0.0",
+  "description": "For all your random Star Wars character needs",
+  "main": "src/index.js",
+  "dependencies": {
+    "unique-random-array": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.15.0",
+    "eslint-config-kentcdodds": "^9.0.0",
+    "ghooks": "^2.0.0",
+    "mocha": "^3.2.0",
+    "npm-run-all": "^4.0.1",
+    "nyc": "^10.1.2",
+    "rimraf": "^2.5.4"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "nyc mocha",
+    "watch:test": "mocha --watch",
+    "prevalidate": "rimraf coverage",
+    "validate": "npm-run-all --parallel lint test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kentcdodds/starwars-names.git"
+  },
+  "keywords": [
+    "star",
+    "wars"
+  ],
+  "author": "Radek Tomasek <radek.tomasek@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kentcdodds/starwars-names/issues"
+  },
+  "homepage": "https://github.com/kentcdodds/starwars-names#readme",
+  "nyc": {
+    "check-coverage": true,
+    "branches": 100,
+    "functions": 100,
+    "lines": 100,
+    "statements": 100,
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "include": [
+      "src"
+    ]
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run validate"
+    }
+  }
+}
