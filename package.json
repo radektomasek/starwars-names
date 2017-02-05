@@ -32,6 +32,7 @@
     "lint": "eslint .",
     "test": "NODE_ENV=test nyc mocha",
     "watch:test": "mocha --watch",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
     "prevalidate": "rimraf coverage",
     "validate": "npm-run-all --parallel lint test build"
   },
