@@ -1,4 +1,4 @@
-import  uniqueRandomArray from 'unique-random-array'
+import uniqueRandomArray from 'unique-random-array'
 const starWarsNames = require('./starwars_names.json')
 
 export default {
